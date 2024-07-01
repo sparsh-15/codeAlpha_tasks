@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Image Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 class="gallery-heading">Gallery</h1>
+    <div class="gallery">
+        <div class="gallery-container">
+            <img id="main-image" src="images/image1.jpg" alt="Gallery Image">
+            <div id="caption">Image 1</div>
+            <div class="navigation">
+                <span class="nav-arrow" id="prev" onclick="navigate(-1)">&#10094;</span>
+                <span class="nav-arrow" id="next" onclick="navigate(1)">&#10095;</span>
+            </div>
+
+            
+        </div>
+        <div class="thumbnails">
+            <img src="images/image1.jpg" alt="Thumbnail 1" class="thumbnail" onclick="changeImage(0, 'Image 1')">
+            <img src="images/image2.jpg" alt="Thumbnail 2" class="thumbnail" onclick="changeImage(1, 'Image 2')">
+            <img src="images/image3.jpg" alt="Thumbnail 3" class="thumbnail" onclick="changeImage(2, 'Image 3')">
+            <img src="images/image4.jpg" alt="Thumbnail 4" class="thumbnail" onclick="changeImage(3, 'Image 4')">
+            <img src="images/image5.jpg" alt="Thumbnail 5" class="thumbnail" onclick="changeImage(4, 'Image 5')">
+            <!-- Add more thumbnails as needed -->
+        </div>
+    </div>
+
+    <!-- Modal for larger images -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-image">
+        <div id="modal-caption"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
